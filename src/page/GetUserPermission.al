@@ -21,9 +21,11 @@ page 50100 GetUserPermission
     {
         area(Processing)
         {
-            action(GetAddress)
+            action(GetUserPermission)
             {
                 ApplicationArea = All;
+                Caption = 'Get User Permission';
+                Image = Permission;
 
                 trigger OnAction()
                 var
