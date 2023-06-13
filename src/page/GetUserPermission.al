@@ -28,27 +28,15 @@ page 50100 GetUserPermission
                 trigger OnAction()
                 var
                     AddressProvider: Interface IUserPermissionProvider;
+                    PermissionProviderMgt: Codeunit PermissionProviderMgt;
                 begin
-                    GetUserPermissionFactory(AddressProvider);
+                    PermissionProviderMgt.SetUserPermissionProvider();
+                    PermissionProviderMgt.UserPermissionProviderFactory(AddressProvider);
                     Message(AddressProvider.GetUserPermissions());
                 end;
             }
         }
     }
 
-    local procedure GetUserPermissionFactory(var IUserPermissionProvider: Interface IUserPermissionProvider)
-    var
-        FeatureManagementFacade: Codeunit "Feature Management Facade";
-        FeatureFlaglbl: Label 'HideLegacyUserGroups';
-    begin
-        if FeatureManagementFacade.IsEnabled(FeatureFlaglbl) then
-            permissionProviderFeature := permissionProviderFeature::Modern
-        else
-            permissionProviderFeature := permissionProviderFeature::Legacy;
 
-        IUserPermissionProvider := permissionProviderFeature;
-    end;
-
-    var
-        permissionProviderFeature: enum PermissionProviderFeature;
 }
