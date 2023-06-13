@@ -39,6 +39,4 @@ page 50100 GetUserPermission
             }
         }
     }
-
-
 }
