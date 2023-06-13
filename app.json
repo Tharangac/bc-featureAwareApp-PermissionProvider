@@ -1,0 +1,32 @@
+{
+  "id": "eaa9b873-51ca-4a0e-87f6-7dadbfe90329",
+  "name": "Feature Aware App",
+  "publisher": "TharangaC",
+  "version": "1.0.0.0",
+  "brief": "A Feature Aware App intelligently adapts to the capabilities of the application, providing a tailored user experience optimized for its unique features.",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "22.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "11.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
